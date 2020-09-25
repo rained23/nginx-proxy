@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  server: 
+    image: nginx-proxy
+    build:
+      context: .
+    ports:
+      - "8989:8989"
+#   frontend:
+#     image: nginx-frontend
+#     build: 
+#       context: ./frontend
+#       args:
+#         - REACT_APP_SERVICES_HOST=/services/m
+#     ports:
+#       - "80:80"
+#     networks: 
+#       - frontend
+#       - backend
+  
+#   backend:
+#     image: nginx-backend
+#     build:
+#       context: ./backend
+#     networks: 
+#       - backend
+
+# networks: 
+#   frontend:
+#   backend:
